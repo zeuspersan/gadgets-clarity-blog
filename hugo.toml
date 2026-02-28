@@ -1,0 +1,8 @@
+baseURL = "https://gadgetsclarity.com/"
+languageCode = "en-us"
+title = "Gadgets Clarity"
+theme = "PaperMod"
+
+[params.author]
+name = "Gadgets Clarity Team"
+email = "contact@gadgetsclarity.com"
