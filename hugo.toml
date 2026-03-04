@@ -4,7 +4,7 @@ copyright = "© GadgetsClarity — The Final Check Before You Checkout."
 languageCode = "en-us"
 theme = "PaperMod"
 disableAliases = true
-enableGitInfo = false
+enableGitInfo = true
 
 # Enable native Hugo features for SEO
 enableRobotsTXT = true
@@ -14,6 +14,11 @@ buildFuture = false
 
 [build]
   noJSConfigInAssets = true
+
+# Configure Frontmatter explicitly to prioritize Git commit dates
+[frontmatter]
+  date =["date", "publishDate", "lastmod"]
+  lastmod =[":git", "lastmod", "date", "publishDate"]
 
 [markup]
   [markup.tableOfContents]
@@ -92,8 +97,13 @@ buildFuture = false
   safari_pinned_tab = "/favicon_io/safari-pinned-tab.svg"
 
 [params.schema]
-# PaperMod natively injects Schema.org data. Ensure your publisher entity is defined.
-publisher = "GadgetsClarity"
+  publisher = "GadgetsClarity"
+
+[sitemap]
+  disable = false
+  filename = "sitemap.xml"
+  # changefreq = "weekly" (Delete this - Set lastmod info from Git)
+  # priority = 0.5        (Delete this)
 
 [services]
   [services.googleAnalytics]
