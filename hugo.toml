@@ -50,6 +50,9 @@ enableGitInfo = false
     isPlainText = true
     notAlternative = true
 
+[pagination]
+  pagerSize = 24
+
 [params]
   author = "Gadgets Clarity Team"
   hideAuthor = true
@@ -71,3 +74,7 @@ enableGitInfo = false
   [services.googleAnalytics]
     id = 'G-DQNHTGNNP7'
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  brand = "brands"

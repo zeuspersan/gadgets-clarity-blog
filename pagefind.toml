@@ -1,0 +1,20 @@
+# pagefind.toml
+site = "public"
+output-path = "public/pagefind"
+
+# Focus on the main content
+root-selector = "main"
+
+# Precisely remove the "noise" without touching Hugo templates
+exclude_selectors = [
+    ".paginav",         # Excludes Next/Prev post links
+    ".post-footer",     # Excludes tags and share buttons
+    ".comments",        # Excludes comment sections (highly recommended)
+    ".post-meta"        # Optional: Excludes "5 min read" or "March 2026" text from snippets
+]
+
+# Use a more specific glob to target individual post files 
+# while ignoring the top-level 'index.html' of the list pages.
+# glob = "posts/**/*.html"
+# glob = "posts/**/index.html"
+glob = "posts/*/index.html"
