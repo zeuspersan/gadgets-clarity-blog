@@ -1,0 +1,4 @@
+/* Hides the 'Powered by Hugo & PaperMod' text without modifying theme files */
+.footer span:last-child {
+    display: none;
+}

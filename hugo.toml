@@ -4,6 +4,7 @@ title = "Gadgets Clarity"
 theme = "PaperMod"
 disableAliases = true
 enableGitInfo = false
+copyright = "© GadgetsClarity — The Final Check Before You Checkout."
 
 [build]
   noJSConfigInAssets = true
