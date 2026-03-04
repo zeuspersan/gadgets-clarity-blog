@@ -9,6 +9,12 @@ copyright = "© GadgetsClarity — The Final Check Before You Checkout."
 [build]
   noJSConfigInAssets = true
 
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2  # Starts indexing at H2 (##)
+    endLevel = 3    # Stops indexing after H3 (###)
+    ordered = false # Uses bullet points instead of numbers
+
 [mediaTypes]
   [mediaTypes."text/cloudflare"]
     mediaType = "text/plain"
@@ -63,6 +69,8 @@ copyright = "© GadgetsClarity — The Final Check Before You Checkout."
   ShowReadingTime = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
+  ShowToc = true    # Enables ToC globally
+  TocOpen = false   # Sets the ToC to be collapsed by default
 
 [params.assets]
   favicon = "/favicon_io/favicon.ico"

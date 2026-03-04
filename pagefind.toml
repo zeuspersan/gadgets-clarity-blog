@@ -10,7 +10,8 @@ exclude_selectors = [
     ".paginav",         # Excludes Next/Prev post links
     ".post-footer",     # Excludes tags and share buttons
     ".comments",        # Excludes comment sections (highly recommended)
-    ".post-meta"        # Optional: Excludes "5 min read" or "March 2026" text from snippets
+    ".post-meta",        # Optional: Excludes "5 min read" or "March 2026" text from snippets
+    ".toc"
 ]
 
 # Use a more specific glob to target individual post files 
