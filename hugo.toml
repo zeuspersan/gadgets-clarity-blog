@@ -1,10 +1,16 @@
 baseURL = "https://gadgetsclarity.com/"
+title = "GadgetsClarity"
+copyright = "© GadgetsClarity — The Final Check Before You Checkout."
 languageCode = "en-us"
-title = "Gadgets Clarity"
 theme = "PaperMod"
 disableAliases = true
 enableGitInfo = false
-copyright = "© GadgetsClarity — The Final Check Before You Checkout."
+
+# Enable native Hugo features for SEO
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
 
 [build]
   noJSConfigInAssets = true
@@ -61,10 +67,11 @@ copyright = "© GadgetsClarity — The Final Check Before You Checkout."
   pagerSize = 24
 
 [params]
-  author = "Gadgets Clarity Team"
+  author = "GadgetsClarity Expert Team"
   hideAuthor = true
   env = "production"
-  description = "Gadgets Clarity: The Final Check Before You Checkout."
+  description = "GadgetsClarity: The Final Check Before You Checkout. Expert, hands-on reviews of AI gadgets and modern tech."
+  images =["images/gadgetsclarity-global-cover.webp"] # Global fallback for Open Graph/Twitter cards
   ShowShareButtons = true
   ShowReadingTime = true
   ShowBreadCrumbs = true
@@ -72,12 +79,21 @@ copyright = "© GadgetsClarity — The Final Check Before You Checkout."
   ShowToc = true    # Enables ToC globally
   TocOpen = false   # Sets the ToC to be collapsed by default
 
+[params.label]
+  text = "GadgetsClarity" # The text displayed next to the logo
+  icon = "/images/gadgetsclarity-logo.webp" # This natively populates BOTH the header and Google Schema!
+  # iconHeight = 30 # Adjusts the visual height in the nav bar (default is 30)
+
 [params.assets]
   favicon = "/favicon_io/favicon.ico"
   favicon16x16 = "/favicon_io/favicon-16x16.png"
   favicon32x32 = "/favicon_io/favicon-32x32.png"
   apple_touch_icon = "/favicon_io/apple-touch-icon.png"
   safari_pinned_tab = "/favicon_io/safari-pinned-tab.svg"
+
+[params.schema]
+# PaperMod natively injects Schema.org data. Ensure your publisher entity is defined.
+publisher = "GadgetsClarity"
 
 [services]
   [services.googleAnalytics]
