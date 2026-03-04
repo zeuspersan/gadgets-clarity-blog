@@ -75,6 +75,4 @@ enableGitInfo = false
     id = 'G-DQNHTGNNP7'
 
 [taxonomies]
-  category = "categories"
   tag = "tags"
-  brand = "brands"

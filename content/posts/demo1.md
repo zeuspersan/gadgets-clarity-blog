@@ -3,7 +3,6 @@ date = '2026-02-28T23:05:38-05:00'
 draft = false
 title = 'Post About Something'
 tags = ["taga"]
-categories = ["categA"]
 +++
 
 df gh dfg hdfh dfh hrt

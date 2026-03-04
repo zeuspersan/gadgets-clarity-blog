@@ -3,13 +3,10 @@
 
 <!-- Pagefind Faceted Search Filters -->
 {{- if .IsPage }}
-  <!-- Categories -->
-  {{- range (.GetTerms "categories") }}
-  <meta data-pagefind-filter="category[content]" content="{{ .Title }}" />
-  {{- end }}
 
   <!-- Tags -->
   {{- range (.GetTerms "tags") }}
   <meta data-pagefind-filter="tag[content]" content="{{ .Title }}" />
   {{- end }}
+  
 {{- end }}
