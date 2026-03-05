@@ -1,0 +1,30 @@
+{{ define "main" }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+
+<div class="post-content">
+    <!-- Pagefind UI Container -->
+    <div id="search"></div>
+</div>
+
+<!-- Load Pagefind CSS and JS -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ 
+            element: "#search",
+            showSubResults: true,
+            showImages: true, // Set to true if your posts have featured images
+            autofocus: true, // Added in recent Pagefind releases for better UX
+            pageSize: 10     // Controls pagination for your massive article database
+        });
+    });
+</script>
+{{ end }}

@@ -1,0 +1,73 @@
+baseURL = "https://gadgetsclarity.com/"
+languageCode = "en-us"
+title = "Gadgets Clarity"
+theme = "PaperMod"
+disableAliases = true
+enableGitInfo = false
+
+[build]
+  noJSConfigInAssets = true
+
+[mediaTypes]
+  [mediaTypes."text/cloudflare"]
+    mediaType = "text/plain"
+    suffixes = [""]
+
+[menus]
+  [[menus.main]]
+    identifier = "search"
+    name = "Search"
+    pageRef = "/search"
+    weight = 20
+  [[menus.main]]
+    identifier = "tags"
+    name = "Tags"
+    pageRef = "/tags"
+    weight = 30
+  [[menus.main]]
+    identifier = "archives"
+    name = "Reviews"
+    pageRef = "/archives"
+    weight = 40
+  [[menus.main]]
+    identifier = "about"
+    name = "About Us"
+    pageRef = "/about"
+    weight = 50
+  [[menus.main]]
+    identifier = "legal"
+    name = "Legal"
+    pageRef = "/legal"
+    weight = 60
+
+[outputs]
+  home = ["HTML", "RSS", "REDIRECTS"]
+
+[outputFormats]
+  [outputFormats.REDIRECTS]
+    mediaType = "text/cloudflare"
+    baseName = "_redirects"
+    isPlainText = true
+    notAlternative = true
+
+[params]
+  author = "Gadgets Clarity Team"
+  hideAuthor = true
+  env = "production"
+  description = "Gadgets Clarity: The Final Check Before You Checkout."
+  ShowShareButtons = true
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+
+[params.assets]
+  favicon = "/favicon_io/favicon.ico"
+  favicon16x16 = "/favicon_io/favicon-16x16.png"
+  favicon32x32 = "/favicon_io/favicon-32x32.png"
+  apple_touch_icon = "/favicon_io/apple-touch-icon.png"
+  safari_pinned_tab = "/favicon_io/safari-pinned-tab.svg"
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-DQNHTGNNP7'
+

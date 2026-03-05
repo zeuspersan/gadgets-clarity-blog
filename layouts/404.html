@@ -1,0 +1,94 @@
+{{- define "main" }}
+<style>
+    /* 1. Pagefind UI - PaperMod Theme Sync */
+    :root {
+        --pagefind-ui-primary: var(--primary);
+        --pagefind-ui-text: var(--primary);
+        --pagefind-ui-background: var(--entry);
+        --pagefind-ui-border: var(--tertiary);
+        --pagefind-ui-tag: var(--tertiary);
+        --pagefind-ui-border-width: 1px;
+        --pagefind-ui-border-radius: 8px;
+    }
+
+    /* 2. Layout & Container Simplification */
+    .not-found-container {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    .not-found-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .not-found-container p {
+        color: var(--secondary);
+        margin-bottom: 2rem;
+    }
+
+    /* 3. Single CTA Button */
+    .tag-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: var(--entry);
+        border: 1px solid var(--tertiary);
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 600;
+        transition: background 0.2s ease, transform 0.2s ease;
+        margin-bottom: 3rem;
+    }
+    .tag-btn:hover {
+        background: var(--tertiary);
+        transform: translateY(-2px);
+    }
+
+    /* 4. Search Wrapper */
+    .search-wrapper {
+        text-align: left; /* Keeps Pagefind results readable */
+    }
+    .search-prompt {
+        text-align: center;
+        color: var(--secondary);
+        margin-bottom: 1rem;
+    }
+</style>
+
+<main class="main not-found-container" data-pagefind-ignore="all">
+    <header class="page-header">
+        <h1>404 — Review Not Found</h1>
+        <p>This review is unavailable.</p>
+    </header>
+    
+    <!-- Actionable Recovery Pathway -->
+    <a href="/tags/" class="tag-btn" aria-label="Filter reviews by tags">
+        🏷️ Filter by Tags
+    </a>
+
+    <div class="search-wrapper">
+        <p class="search-prompt">
+            Or, search for what you need:
+        </p>
+        <div id="search-404"></div>
+    </div>
+</main>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js" defer></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        new PagefindUI({ 
+            element: "#search-404", 
+            showSubResults: true,
+            showImages: true,
+            translations: {
+                placeholder: "Search for ..."
+            }
+        });
+    });
+</script>
+{{- end }}
