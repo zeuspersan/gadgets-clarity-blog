@@ -3,7 +3,16 @@ date = '2026-02-28T23:05:38-05:00'
 draft = false
 title = 'Post About Something'
 tags = ["taga"]
+
+[cover]
+    image = "demo.jpg" # Relative to the bundle folder
+    alt = "Demo alt text"
+    caption = "A cool gadget demo"
+    relative = true # Crucial for Leaf Bundles
 +++
+
+
+![Demo alt text](demo.jpg)
 
 smartwatch
 
