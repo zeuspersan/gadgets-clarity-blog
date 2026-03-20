@@ -44,7 +44,7 @@ buildFuture = false
     weight = 30
   [[menus.main]]
     identifier = "archives"
-    name = "Reviews"
+    name = "Archive"
     pageRef = "/archives"
     weight = 40
   [[menus.main]]

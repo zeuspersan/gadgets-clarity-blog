@@ -2,6 +2,7 @@
 date = '{{ .Date }}'
 draft = true
 title = 'xxx'
+description = 'xxx'
 tags = ['xxx']
 
 [cover]
